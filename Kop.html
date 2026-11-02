@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Liverpool FC Legends - Personal Collection</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Kanit & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lfc: {
+                            red: '#C8102E',
+                            darkred: '#8A081D',
+                            gold: '#D4AF37',
+                            lightgold: '#F6EB61',
+                            dark: '#0F0F11',
+                            cardBg: '#1A1A1D',
+                            gray: '#252529'
+                        }
+                    },
+                    fontFamily: {
+                        kanit: ['Kanit', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-lfc-dark text-gray-100 flex flex-col min-h-screen">
+
+    <!-- Sticky Header Navigation (Anchor Smooth Scroll Links) -->
+    <header class="sticky top-0 z-50 bg-lfc-dark/95 backdrop-blur-md border-b border-lfc-red/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Brand -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shadow-lg border-2 border-lfc-gold transition-transform group-hover:scale-105 bg-lfc-red">
+    <img src="https://i.pinimg.com/736x/fe/da/8e/feda8eba6cad511f5b1f2d0c7b99a888.jpg" alt="Liverpool Logo" class="w-full h-full object-cover">
+</div>
+                    <div>
+                        <span class="heading-font font-black text-xl tracking-wider text-white block">LIVERPOOL</span>
+                        <span class="text-xs text-lfc-gold tracking-widest uppercase font-semibold">5 Greatest Legends</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links (Smooth Anchor Links) -->
+                <nav class="hidden md:flex space-x-1 lg:space-x-3">
+                    <a href="#home" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:text-white hover:bg-lfc-gray transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-house text-xs text-lfc-gold"></i>
+                        <span>HOME</span>
+                    </a>
+                    <a href="#story" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:text-white hover:bg-lfc-gray transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-list-ol text-xs text-lfc-gold"></i>
+                        <span>STORY</span>
+                    </a>
+                    <a href="#collection" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:text-white hover:bg-lfc-gray transition-all flex items-center space-x-2">
+                        <!-- เปลี่ยนจากไอคอนรูปโล่เป็นรูปโลโก้ Liverpool -->
+                        <img src="https://i.pinimg.com/1200x/39/b1/92/39b192df2159067d6ada7f207475ed1e.jpg" alt="Logo" class="w-4 h-4 rounded-full object-cover border border-lfc-gold">
+                        <span>COLLECTION</span>
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-lfc-cardBg border-b border-lfc-red/40 px-4 pt-2 pb-4 space-y-2">
+            <a href="#home" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-lg text-base font-semibold hover:bg-lfc-red/20 text-gray-200">
+                <i class="fa-solid fa-house text-lfc-gold mr-3"></i>HOME
+            </a>
+            <a href="#story" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-lg text-base font-semibold hover:bg-lfc-red/20 text-gray-200">
+                <i class="fa-solid fa-list-ol text-lfc-gold mr-3"></i>STORY
+            </a>
+            <a href="#collection" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-lg text-base font-semibold hover:bg-lfc-red/20 text-gray-200 flex items-center">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=100&auto=format&fit=crop" alt="Logo" class="w-4 h-4 rounded-full object-cover border border-lfc-gold mr-3">
+                COLLECTION
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Container (One Flowing Single Page) -->
+    <main class="flex-grow">
+
+        <!-- ================= 1. HERO / HOME SECTION ================= -->
+        <section id="home" class="min-h-[calc(100vh-80px)] relative overflow-hidden flex flex-col justify-center border-b border-gray-800/80 py-16 lg:py-24">
+            <!-- Background Visuals -->
+            <div class="absolute inset-0 bg-gradient-to-r from-lfc-dark via-lfc-dark/90 to-lfc-red/20 z-0"></div>
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-lfc-red/25 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-lfc-red/20 border border-lfc-red/50 text-lfc-gold text-sm font-semibold tracking-wide">
+                            <i class="fa-solid fa-trophy"></i>
+                            <span>PERSONAL COLLECTION WEBSITE</span>
+                        </div>
+
+                        <h1 class="heading-font text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none text-white">
+                            YOU'LL NEVER <br/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-lfc-red via-red-500 to-lfc-gold text-glow-red">WALK ALONE</span>
+                        </h1>
+
+                        <p class="text-gray-300 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            ยินดีต้อนรับสู่ <span class="text-lfc-gold font-semibold">Top 5 Liverpool Legends Collection</span> คอลเลกชันส่วนตัวที่รวบรวม 5 ยอดนักเตะในดวงใจตลอดกาลแห่งถิ่นแอนฟิลด์ ผู้สร้างประวัติศาสตร์และปลุกจิตวิญญาณความยิ่งใหญ่ให้สโมสร
+                        </p>
+
+                        <!-- Highlights Banner -->
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-800 max-w-xl mx-auto lg:mx-0">
+                            <div class="p-4 rounded-xl bg-lfc-cardBg/80 border border-gray-800 text-center">
+                                <div class="heading-font text-2xl sm:text-3xl font-extrabold text-lfc-gold">5</div>
+                                <div class="text-xs text-gray-400 mt-1 uppercase">Top Legends</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-lfc-cardBg/80 border border-gray-800 text-center">
+                                <div class="heading-font text-2xl sm:text-3xl font-extrabold text-lfc-red">20</div>
+                                <div class="text-xs text-gray-400 mt-1 uppercase">League Titles</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-lfc-cardBg/80 border border-gray-800 text-center">
+                                <div class="heading-font text-2xl sm:text-3xl font-extrabold text-lfc-gold">6</div>
+                                <div class="text-xs text-gray-400 mt-1 uppercase">UCL Champions</div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#story" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-lfc-red to-lfc-darkred text-white font-bold text-lg hover:shadow-lg hover:shadow-lfc-red/40 transition-all duration-300 flex items-center justify-center space-x-3 group border border-red-500/30">
+                                <span>สำรวจคอลเลกชัน</span>
+                                <i class="fa-solid fa-arrow-down transform group-hover:translate-y-1 transition-transform"></i>
+                            </a>
+                            <a href="#collection" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-lfc-gray hover:bg-gray-800 text-gray-200 font-semibold text-lg border border-gray-700 transition-all duration-300 flex items-center justify-center space-x-2">
+                                <!-- เปลี่ยนจากไอคอนรูปโล่เป็นรูปโลโก้ Liverpool ในปุ่ม Hero -->
+                                <img src="https://i.pinimg.com/736x/fe/da/8e/feda8eba6cad511f5b1f2d0c7b99a888.jpg" alt="Logo" class="w-5 h-5 rounded-full object-cover border border-lfc-gold">
+                                <span>ดูรายละเอียดนักเตะ</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Key Visual Graphic -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-lfc-red to-lfc-gold rounded-3xl blur opacity-30"></div>
+                            <div class="relative rounded-3xl bg-lfc-cardBg p-6 border border-gray-800 shadow-2xl">
+                                <div class="overflow-hidden rounded-2xl relative aspect-[4/5] bg-lfc-gray">
+                                    <img src="https://i.pinimg.com/736x/24/c9/90/24c990951caf8d8d6b854250de57b394.jpg" alt="Anfield Stadium" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-lfc-dark via-transparent to-transparent opacity-90"></div>
+                                    <div class="absolute bottom-6 left-6 right-6">
+                                        <span class="text-xs font-bold uppercase tracking-widest text-lfc-gold bg-lfc-red/90 px-3 py-1 rounded-full inline-block mb-2">This Is Anfield</span>
+                                        <h3 class="heading-font text-2xl font-bold text-white">THE HOME OF LEGENDS</h3>
+                                        <p class="text-sm text-gray-300 mt-1 font-light">"แอนฟิลด์" ดินแดนศักดิ์สิทธิ์ที่กำเนิดยอดกัปตันทีมและดาวยิงระดับตำนาน</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 2. STORY / OVERVIEW SECTION ================= -->
+        <section id="story" class="py-20 border-b border-gray-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-lfc-gold text-sm font-bold uppercase tracking-widest">Story & Overview</span>
+                    <h2 class="heading-font text-3xl sm:text-5xl font-extrabold text-white mt-2">ทำความรู้จัก 5 ยอดนักเตะ</h2>
+                    <p class="text-gray-400 mt-4 text-base sm:text-lg">
+                        ภาพรวมของนักเตะทั้ง 5 คนที่ถูกคัดเลือกเข้ามาใน Personal Collection พร้อมกรองตามยุคสมัยได้
+                    </p>
+                    <div class="w-24 h-1 bg-lfc-red mx-auto mt-6 rounded-full"></div>
+                </div>
+
+                <!-- Era Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 mb-12">
+                    <button onclick="filterEra('all')" id="filter-all" class="era-filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-lfc-red text-white shadow-lg">
+                        ทั้งหมด (All 5)
+                    </button>
+                    <button onclick="filterEra('modern')" id="filter-modern" class="era-filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-lfc-cardBg border border-gray-800 text-gray-400 hover:text-white">
+                        ยุคปัจจุบัน (Modern Era)
+                    </button>
+                    <button onclick="filterEra('classic')" id="filter-classic" class="era-filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-lfc-cardBg border border-gray-800 text-gray-400 hover:text-white">
+                        ยุคคลาสสิก (Classic Era)
+                    </button>
+                </div>
+
+                <!-- Story Cards Grid -->
+                <div id="story-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cards are dynamically rendered via JS -->
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= 3. COLLECTION / DETAILED SHOWCASE ================= -->
+        <section id="collection" class="py-20 bg-lfc-dark/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-lfc-gold text-sm font-bold uppercase tracking-widest">Detailed Showcase</span>
+                    <h2 class="heading-font text-3xl sm:text-5xl font-extrabold text-white mt-2">COLLECTION DETAILS</h2>
+                    <p class="text-gray-400 mt-3">เจาะลึกสถิติ คำคม และเหตุผลความประทับใจของนักเตะแต่ละคนในคอลเลกชัน</p>
+                </div>
+
+                <!-- Interactive Player Selector Tabs -->
+                <div class="flex overflow-x-auto pb-4 mb-8 no-scrollbar justify-start md:justify-center space-x-3 px-2">
+                    <button onclick="selectPlayer(1)" id="selector-1" class="player-select-btn px-6 py-3 rounded-xl bg-lfc-cardBg border border-gray-800 text-gray-300 hover:border-lfc-red flex items-center space-x-3 transition-all whitespace-nowrap">
+                        <span class="w-6 h-6 rounded-full bg-lfc-red text-white text-xs flex items-center justify-center font-bold">1</span>
+                        <span>S. Gerrard</span>
+                    </button>
+                    <button onclick="selectPlayer(2)" id="selector-2" class="player-select-btn px-6 py-3 rounded-xl bg-lfc-cardBg border border-gray-800 text-gray-300 hover:border-lfc-red flex items-center space-x-3 transition-all whitespace-nowrap">
+                        <span class="w-6 h-6 rounded-full bg-lfc-red text-white text-xs flex items-center justify-center font-bold">2</span>
+                        <span>M. Salah</span>
+                    </button>
+                    <button onclick="selectPlayer(3)" id="selector-3" class="player-select-btn px-6 py-3 rounded-xl bg-lfc-cardBg border border-gray-800 text-gray-300 hover:border-lfc-red flex items-center space-x-3 transition-all whitespace-nowrap">
+                        <span class="w-6 h-6 rounded-full bg-lfc-red text-white text-xs flex items-center justify-center font-bold">3</span>
+                        <span>K. Dalglish</span>
+                    </button>
+                    <button onclick="selectPlayer(4)" id="selector-4" class="player-select-btn px-6 py-3 rounded-xl bg-lfc-cardBg border border-gray-800 text-gray-300 hover:border-lfc-red flex items-center space-x-3 transition-all whitespace-nowrap">
+                        <span class="w-6 h-6 rounded-full bg-lfc-red text-white text-xs flex items-center justify-center font-bold">4</span>
+                        <span>V. van Dijk</span>
+                    </button>
+                    <button onclick="selectPlayer(5)" id="selector-5" class="player-select-btn px-6 py-3 rounded-xl bg-lfc-cardBg border border-gray-800 text-gray-300 hover:border-lfc-red flex items-center space-x-3 transition-all whitespace-nowrap">
+                        <span class="w-6 h-6 rounded-full bg-lfc-red text-white text-xs flex items-center justify-center font-bold">5</span>
+                        <span>I. Rush</span>
+                    </button>
+                </div>
+
+                <!-- Player Details Card Showcase -->
+                <div id="player-detail-container" class="bg-lfc-cardBg rounded-3xl border border-gray-800 p-6 sm:p-10 shadow-2xl transition-all duration-300">
+                    <!-- Detailed profile populated dynamically by JS -->
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-lfc-dark border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-3">
+                <span class="heading-font font-extrabold text-lfc-red text-xl">LIVERPOOL LEGENDS</span>
+                <span class="text-gray-600">|</span>
+                <span class="text-xs text-lfc-gold uppercase tracking-widest">Personal Collection</span>
+            </div>
+            <p class="text-gray-500 text-xs">
+                © Top 5 Liverpool FC Legends Collection. Designed for Web & Graphic Showcase.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive Data & Script -->
+    <script>
+        // Player Collection Data
+        const playersData = [
+            {
+                id: 1,
+                rank: "RANK #1",
+                name: "Steven Gerrard",
+                nickname: "Captain Fantastic",
+                position: "กองกลาง (Midfielder)",
+                number: "8",
+                eraTag: "modern",
+                eraText: "ยุคโมเดิร์น (1998-2015)",
+                image: "https://i.pinimg.com/1200x/f5/66/f1/f566f1ccae5f67c430613a4605146cd4.jpg",
+                stats: {
+                    appearances: "710 นัด",
+                    goals: "186 ประตู",
+                    assists: "150+ แอสซิสต์",
+                    trophies: "UCL 2005, FA Cup x2, UEFA Cup"
+                },
+                quote: "When I'm on my deathbed, I won't be looking at my medals, I'll be thinking about the memories.",
+                story: "สตีเวน เจอร์ราร์ด คือสัญลักษณ์แห่งความจงรักภักดีและหัวใจของลิเวอร์พูล เขามีลูกยิงไกลอันทรงพลัง ภาวะผู้นำที่ไม่แพ้ใคร และปาฏิหาริย์ที่อิสตันบูลปี 2005 ที่ปลุกทีมกลับมาจากความสิ้นหวัง 0-3 กลับมาชนะมิลานคว้าแชมป์ยุโรปได้สำเร็จ",
+                whyImpression: "เจอร์ราร์ดเป็นแบบอย่างของคำว่ากัปตันทีมที่ไม่เคยยอมแพ้ แม้ในวันที่ทีมเสียเปรียบ เขาคือคนที่พร้อมจะแบกทีมไว้บนบ่าเสมอ"
+            },
+            {
+                id: 2,
+                rank: "RANK #2",
+                name: "Mohamed Salah",
+                nickname: "The Egyptian King",
+                position: "กองหน้า / ปีกขวา (Forward)",
+                number: "11",
+                eraTag: "modern",
+                eraText: "ยุคปัจจุบัน (2017-ปัจจุบัน)",
+                image: "https://i.pinimg.com/1200x/fc/52/5e/fc525eb475667af3af8ba531a3369cf6.jpg",
+                stats: {
+                    appearances: "340+ นัด",
+                    goals: "210+ ประตู",
+                    assists: "80+ แอสซิสต์",
+                    trophies: "Premier League, UCL, FA Cup, Club World Cup"
+                },
+                quote: "I want to be remembered as the best player to ever play for Liverpool.",
+                story: "โมฮาเหม็ด ซาลาห์ ย้ายมาร่วมทีมในปี 2017 และทำลายสถิติการยิงประตูในพรีเมียร์ลีกฤดูกาลเดียว (32 ประตู) เขามีความเร็ว การจบสกอร์ที่เด็ดขาด และความคงเส้นคงวาในระดับโลกจนได้รับฉายา 'ราชาแห่งอียิปต์'",
+                whyImpression: "ซาลาห์ก้าวขึ้นมาเป็นกำลังหลักสำคัญที่พาสโมสรคว้าแชมป์พรีเมียร์ลีกครั้งแรกในรอบ 30 ปี และรักษาฟอร์มการยิงประตูได้อย่างสม่ำเสมอทุกปี"
+            },
+            {
+                id: 3,
+                rank: "RANK #3",
+                name: "Kenny Dalglish",
+                nickname: "King Kenny",
+                position: "กองหน้า (Forward / Manager)",
+                number: "7",
+                eraTag: "classic",
+                eraText: "ยุคคลาสสิก (1977-1990)",
+                image: "https://i.pinimg.com/736x/ea/d8/b5/ead8b5e03e78fba5971174937400d57a.jpg",
+                stats: {
+                    appearances: "515 นัด",
+                    goals: "172 ประตู",
+                    assists: "160+ แอสซิสต์",
+                    trophies: "ลีก 6 สมัย, ยูโรเปียนคัพ 3 สมัย"
+                },
+                quote: "The people who come to watch us play are the most important people at the club.",
+                story: "เคนนี ดัลกลิช หรือ 'คิง เคนนี' ยอดนักเตะผู้คว้าความสำเร็จสูงสุดในประวัติศาสตร์สโมสร ทั้งในฐานะนักเตะและผู้จัดการทีม เขามีสายตาการจ่ายบอลอันชาญฉลาดและจบสกอร์ได้อย่างคมกริบ",
+                whyImpression: "ดัลกลิชเป็นยิ่งกว่านักฟุตบอล เขาเป็นที่รักของแฟนบอลจากหัวใจที่ยิ่งใหญ่ ทั้งในสนามและคอยเคียงข้างสโมสรและครอบครัวผู้สูญเสียในเหตุการณ์ฮิลส์โบโรห์"
+            },
+            {
+                id: 4,
+                rank: "RANK #4",
+                name: "Virgil van Dijk",
+                nickname: "The Wall",
+                position: "กองหลังกัปตันทีม (Center Back)",
+                number: "4",
+                eraTag: "modern",
+                eraText: "ยุคปัจจุบัน (2018-ปัจจุบัน)",
+                image: "https://i.pinimg.com/736x/32/6a/1c/326a1cad822aacb5a756764359350f85.jpg",
+                stats: {
+                    appearances: "270+ นัด",
+                    goals: "23 ประตู",
+                    cleanSheets: "100+ คลีนชีต",
+                    trophies: "UEFA Player of the Year, Premier League, UCL"
+                },
+                quote: "We want to achieve great things, and we are working hard for it every day.",
+                story: "เฟอร์จิล ฟาน ไดจ์ค ย้ายมาร่วมทีมด้วยสถิติโลกกองหลังในปี 2018 และเปลี่ยนแนวรับของลิเวอร์พูลให้กลายเป็นปราการเหล็กที่แข็งแกร่งที่สุดในโลก จนคว้ารางวัลนักเตะยอดเยี่ยมแห่งปีของยูฟ่า",
+                whyImpression: "ฟาน ไดจ์ค นำความสงบนิ่ง ภาวะผู้นำ และบัญชาการเกมป้องกันได้อย่างสมบูรณ์แบบ ทำให้เพื่อนร่วมทีมเล่นด้วยความมั่นใจตลอดเวลา"
+            },
+            {
+                id: 5,
+                rank: "RANK #5",
+                name: "Ian Rush",
+                nickname: "The Goal Machine",
+                position: "กองหน้า (Striker)",
+                number: "9",
+                eraTag: "classic",
+                eraText: "ยุคคลาสสิก (1980-1996)",
+                image: "https://i.pinimg.com/736x/49/2d/33/492d3345e17ebc79e3a873687e0a6f06.jpg",
+                stats: {
+                    appearances: "660 นัด",
+                    goals: "346 ประตู (สูงสุดตลอดกาล)",
+                    assists: "80+ แอสซิสต์",
+                    trophies: "ลีก 5 สมัย, ยูโรเปียนคัพ 2 สมัย"
+                },
+                quote: "If you're in the box and don't know what to do with the ball, put it in the net.",
+                story: "เอียน รัช คือเจ้าของสถิติดาวยิงสูงสุดตลอดกาลของลิเวอร์พูลด้วยผลงาน 346 ประตู เขามีสัญชาตญาณกองหน้าที่ยอดเยี่ยม รวมถึงเป็นแนวหน้าในการช่วยไล่บดขยี้เกมป้องกันของคู่แข่งอย่างไม่รู้จักเหน็ดเหนื่อย",
+                whyImpression: "สถิติยิงประตูสูงสุดตลอดกาลของเอียน รัช เป็นสถิติอันยิ่งใหญ่ที่ยากจะหาใครมาทำลายล้างได้ เขาคือสัญลักษณ์ของเลข 9 แห่งแอนฟิลด์อย่างแท้จริง"
+            }
+        ];
+
+        // Active State Variables
+        let currentEra = 'all';
+
+        // Render Story Section Grid
+        function renderStoryGrid(era = 'all') {
+            const gridContainer = document.getElementById('story-grid');
+            gridContainer.innerHTML = '';
+
+            const filtered = era === 'all' 
+                ? playersData 
+                : playersData.filter(p => p.eraTag === era);
+
+            filtered.forEach(player => {
+                const card = document.createElement('div');
+                card.className = 'bg-lfc-cardBg rounded-2xl border border-gray-800 overflow-hidden card-hover flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <!-- Card Banner Image -->
+                        <div class="relative h-64 overflow-hidden bg-lfc-gray">
+                            <img src="${player.image}" alt="${player.name}" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-lfc-cardBg via-transparent to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-4 left-4 bg-lfc-red text-lfc-gold font-black text-xs px-3 py-1 rounded-full border border-lfc-gold/30 shadow-md">
+                                ${player.rank}
+                            </div>
+                            <div class="absolute top-4 right-4 bg-lfc-dark/80 text-white font-bold text-xs px-3 py-1 rounded-full border border-gray-700">
+                                #${player.number}
+                            </div>
+                        </div>
+
+                        <!-- Card Content Body -->
+                        <div class="p-6">
+                            <span class="text-xs font-semibold uppercase text-lfc-gold tracking-wider">${player.position}</span>
+                            <h3 class="heading-font text-2xl font-bold text-white mt-1">${player.name}</h3>
+                            <p class="text-sm text-lfc-gold font-medium italic mt-0.5">"${player.nickname}"</p>
+                            
+                            <p class="text-gray-400 text-sm mt-3 line-clamp-3 font-light">
+                                ${player.story}
+                            </p>
+
+                            <!-- Key Stat Highlight -->
+                            <div class="mt-4 p-3 rounded-xl bg-lfc-gray border border-gray-800/80 flex justify-between items-center text-xs">
+                                <span class="text-gray-400">สถิติลงเล่น/ประตู:</span>
+                                <span class="font-bold text-white">${player.stats.appearances} / ${player.stats.goals}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Action Button -->
+                    <div class="p-6 pt-0">
+                        <a href="#collection" onclick="selectPlayer(${player.id})" class="w-full py-3 rounded-xl bg-lfc-gray hover:bg-lfc-red text-white font-semibold text-sm transition-all duration-300 border border-gray-700 hover:border-lfc-red flex items-center justify-center space-x-2">
+                            <span>ดูรายละเอียดใน Collection</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                `;
+                gridContainer.appendChild(card);
+            });
+        }
+
+        // Filter Era Tab Switcher in Story Section
+        function filterEra(era) {
+            currentEra = era;
+            document.querySelectorAll('.era-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-lfc-red', 'text-white', 'shadow-lg');
+                btn.classList.add('bg-lfc-cardBg', 'text-gray-400');
+            });
+
+            const activeBtn = document.getElementById(`filter-${era}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-lfc-cardBg', 'text-gray-400');
+                activeBtn.classList.add('bg-lfc-red', 'text-white', 'shadow-lg');
+            }
+
+            renderStoryGrid(era);
+        }
+
+        // Render In-Depth Player Profile Detail
+        function selectPlayer(id) {
+            const player = playersData.find(p => p.id === id);
+            if (!player) return;
+
+            // Highlight Selector Button
+            document.querySelectorAll('.player-select-btn').forEach(btn => {
+                btn.classList.remove('border-lfc-red', 'bg-lfc-red/20', 'text-white');
+                btn.classList.add('border-gray-800', 'bg-lfc-cardBg', 'text-gray-300');
+            });
+
+            const activeSelector = document.getElementById(`selector-${id}`);
+            if (activeSelector) {
+                activeSelector.classList.remove('border-gray-800', 'bg-lfc-cardBg', 'text-gray-300');
+                activeSelector.classList.add('border-lfc-red', 'bg-lfc-red/20', 'text-white');
+            }
+
+            // Render Player Detailed HTML
+            const detailContainer = document.getElementById('player-detail-container');
+            detailContainer.innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Player Image Banner Showcase -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-2xl overflow-hidden bg-lfc-gray border border-gray-800 aspect-[3/4]">
+                            <img src="${player.image}" alt="${player.name}" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-lfc-cardBg via-transparent to-transparent opacity-80"></div>
+                            
+                            <!-- Squad Number Overlay -->
+                            <div class="absolute top-4 right-6 heading-font text-7xl font-black text-white/20 select-none">
+                                #${player.number}
+                            </div>
+
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <span class="px-3 py-1 bg-lfc-red text-lfc-gold font-bold text-xs rounded-full inline-block mb-2">
+                                    ${player.rank} • ${player.eraText}
+                                </span>
+                                <h2 class="heading-font text-3xl font-black text-white">${player.name}</h2>
+                                <p class="text-lfc-gold font-semibold text-sm">"${player.nickname}"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Player Detailed Info -->
+                    <div class="lg:col-span-7 space-y-6">
+                        
+                        <!-- Header Info -->
+                        <div>
+                            <span class="text-xs font-bold text-lfc-gold uppercase tracking-widest">${player.position}</span>
+                            <h2 class="heading-font text-3xl sm:text-4xl font-black text-white mt-1">${player.name}</h2>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 py-4 border-y border-gray-800">
+                            <div class="p-3 bg-lfc-gray rounded-xl border border-gray-800 text-center">
+                                <span class="text-xs text-gray-400 block">ลงเล่นทั้งหมด</span>
+                                <span class="heading-font font-bold text-lg text-white">${player.stats.appearances}</span>
+                            </div>
+                            <div class="p-3 bg-lfc-gray rounded-xl border border-gray-800 text-center">
+                                <span class="text-xs text-gray-400 block">จำนวนประตู</span>
+                                <span class="heading-font font-bold text-lg text-lfc-gold">${player.stats.goals}</span>
+                            </div>
+                            <div class="p-3 bg-lfc-gray rounded-xl border border-gray-800 text-center">
+                                <span class="text-xs text-gray-400 block">แอสซิสต์ / คลีนชีต</span>
+                                <span class="heading-font font-bold text-lg text-white">${player.stats.assists || player.stats.cleanSheets}</span>
+                            </div>
+                            <div class="p-3 bg-lfc-gray rounded-xl border border-gray-800 text-center">
+                                <span class="text-xs text-gray-400 block">ถ้วยรางวัลหลัก</span>
+                                <span class="heading-font font-bold text-xs text-lfc-red leading-tight block mt-1">${player.stats.trophies}</span>
+                            </div>
+                        </div>
+
+                        <!-- Famous Quote -->
+                        <div class="p-4 rounded-xl bg-lfc-gray/60 border-l-4 border-lfc-gold italic text-gray-300 text-sm">
+                            <i class="fa-solid fa-quote-left text-lfc-gold mr-2"></i>
+                            "${player.quote}"
+                        </div>
+
+                        <!-- Story & Background -->
+                        <div>
+                            <h4 class="heading-font font-bold text-white text-lg mb-2 flex items-center space-x-2">
+                                <i class="fa-solid fa-book-open text-lfc-red"></i>
+                                <span>เรื่องราวและเกียรติยศ</span>
+                            </h4>
+                            <p class="text-gray-300 leading-relaxed font-light text-base">
+                                ${player.story}
+                            </p>
+                        </div>
+
+                        <!-- Personal Impression / Reason -->
+                        <div class="p-5 rounded-2xl bg-lfc-red/10 border border-lfc-red/30">
+                            <h4 class="heading-font font-bold text-lfc-gold text-base mb-1 flex items-center space-x-2">
+                                <i class="fa-solid fa-star"></i>
+                                <span>เหตุผลและความประทับใจส่วนตัว</span>
+                            </h4>
+                            <p class="text-gray-200 font-light text-sm leading-relaxed">
+                                ${player.whyImpression}
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            `;
+        }
+
+        // Toggle Mobile Navigation Menu
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+        // Initialize Page Load
+        window.onload = function() {
+            renderStoryGrid('all');
+            selectPlayer(1);
+        };
+    </script>
+</body>
+</html>
